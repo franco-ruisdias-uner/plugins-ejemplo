@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>portapapeles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-input label="Texto" [(ngModel)]="textAEscribir"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col>
+        <ion-button (click)="escribirEnPortapapeles()" [disabled]="!textAEscribir">Escribir!</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="leerDesdeElPortapapeles()">Leer!</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -13,8 +13,39 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-list>
+    <ion-item href="/camara">
+      <ion-icon aria-hidden="true" name="camera" slot="start"></ion-icon>
+      <ion-label>Camara</ion-label>
+    </ion-item>
+    <ion-item href="/navegador">
+      <ion-icon aria-hidden="true" name="globe" slot="start"></ion-icon>
+      <ion-label>Navegador (Browser)</ion-label>
+    </ion-item>
+    <ion-item href="/portapapeles">
+      <ion-icon aria-hidden="true" name="clipboard" slot="start"></ion-icon>
+      <ion-label>Portapapeles (Clipboard)</ion-label>
+    </ion-item>
+    <ion-item href="/dispositivo">
+      <ion-icon aria-hidden="true" name="cog" slot="start"></ion-icon>
+      <ion-label>Dispositivo (device)</ion-label>
+    </ion-item>
+    <ion-item button disabled="true">
+      <ion-icon aria-hidden="true" name="folder" slot="start"></ion-icon>
+      <ion-label>Archivo (File System)</ion-label>
+    </ion-item>
+    <ion-item href="/local-notifications">
+      <ion-icon aria-hidden="true" name="notifications" slot="start"></ion-icon>
+      <ion-label>Notificaciones Locales</ion-label>
+    </ion-item>
+    <ion-item button disabled="true">
+      <ion-icon aria-hidden="true" name="cellular" slot="start"></ion-icon>
+      <ion-label>Redes (Network)</ion-label>
+    </ion-item>
+    <ion-item button disabled="true">
+      <ion-icon aria-hidden="true" name="share-social" slot="start"></ion-icon>
+      <ion-label>Compartir (Share)</ion-label>
+    </ion-item>
+  </ion-list>
+
 </ion-content>

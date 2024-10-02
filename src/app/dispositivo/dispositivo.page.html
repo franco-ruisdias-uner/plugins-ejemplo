@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Dispositivo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <ion-label>
+        <h2>ID:</h2>
+        <p>{{ deviceId }}</p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <h2>Info:</h2>
+        <p>{{ deviceInfo }}</p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <h2>Bateria:</h2>
+        <p>{{ batteryInfo }}</p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <h2>Lang:</h2>
+        <p>{{ languageCode }} {{ languageTag }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
