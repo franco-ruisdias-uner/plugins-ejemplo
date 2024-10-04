@@ -33,7 +33,6 @@ export class PortapapelesPage {
         string: this.textAEscribir,
       });
     }
-
   }
 
   async leerDesdeElPortapapeles() {

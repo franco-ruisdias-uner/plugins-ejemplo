@@ -30,4 +30,8 @@ export const routes: Routes = [
     path: 'local-notifications',
     loadComponent: () => import('./local-notifications/local-notifications.page').then( m => m.LocalNotificationsPage)
   },
+  {
+    path: 'redes',
+    loadComponent: () => import('./redes/redes.page').then( m => m.RedesPage)
+  },
 ];
