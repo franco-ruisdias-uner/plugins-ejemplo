@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Compartir</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-button (click)="basicShare()" [disabled]="!puedeCompartir" size="small" fill="clear">Compartir básico</ion-button>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-button (click)="compartirImagenes()" [disabled]="!puedeCompartir" size="small" fill="clear">Compartir imágenes</ion-button>
+    </ion-row>
+  </ion-grid>
+</ion-content>
