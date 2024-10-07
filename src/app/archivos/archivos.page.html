@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Archivos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-button (click)="crearCarpeta()" size="small" fill="clear">Crear carpeta "mi-carpeta"</ion-button>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-button size="small" fill="clear" (click)="crearArchivo()">Crear archivo</ion-button>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-button size="small" fill="clear" (click)="leerArchivo()">Leer archivo</ion-button>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-button size="small" fill="clear" (click)="borrarArchivo()">Borrar archivo</ion-button>
+    </ion-row>
+  </ion-grid>
+</ion-content>

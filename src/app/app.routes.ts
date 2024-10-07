@@ -38,4 +38,8 @@ export const routes: Routes = [
     path: 'compartir',
     loadComponent: () => import('./compartir/compartir.page').then( m => m.CompartirPage)
   },
+  {
+    path: 'archivos',
+    loadComponent: () => import('./archivos/archivos.page').then( m => m.ArchivosPage)
+  },
 ];
