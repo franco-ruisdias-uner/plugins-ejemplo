@@ -42,4 +42,8 @@ export const routes: Routes = [
     path: 'archivos',
     loadComponent: () => import('./archivos/archivos.page').then( m => m.ArchivosPage)
   },
+  {
+    path: 'geolocalizacion',
+    loadComponent: () => import('./geolocalizacion/geolocalizacion.page').then( m => m.GeolocalizacionPage)
+  },
 ];
