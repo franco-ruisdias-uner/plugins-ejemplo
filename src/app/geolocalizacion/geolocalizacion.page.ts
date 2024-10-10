@@ -31,7 +31,7 @@ export class GeolocalizacionPage implements OnInit {
 
   ngOnInit() {
     this.initPlugin();
-    this.getLocation();
+
   }
 
   async initPlugin() {
@@ -44,20 +44,25 @@ export class GeolocalizacionPage implements OnInit {
       coarseLocPermissions = resp.coarseLocation;
     }
     this.hasPermissions = locPermissions === 'granted' && coarseLocPermissions === 'granted'
+    await this.getLocation();
   }
 
   getLocationInicial() {
-    if (!this.locationInicial()) {
+    const loc = this.locationInicial()
+    if (!loc) {
       return null;
     }
-    return this.locationInicial()?.coords
+    const {coords: {latitude, longitude}} = loc;
+    return `${latitude},${longitude}`;
   }
 
   getLocationActual() {
-    if (!this.locationActual()) {
+    const loc = this.locationActual()
+    if (!loc) {
       return null;
     }
-    return this.locationActual()?.coords
+    const {coords: {latitude, longitude}} = loc;
+    return `${latitude},${longitude}`;
   }
 
   async getLocation() {
