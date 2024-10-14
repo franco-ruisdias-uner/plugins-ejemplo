@@ -10,7 +10,7 @@ import {
   IonLabel
 } from '@ionic/angular/standalone';
 import {addIcons} from "ionicons";
-import {camera, cellular, clipboard, cog, folder, globe, locate, notifications, shareSocial} from "ionicons/icons";
+import {camera, cellular, clipboard, cog, folder, globe, locate, map, notifications, shareSocial} from "ionicons/icons";
 
 @Component({
   selector: 'app-home',
@@ -21,6 +21,6 @@ import {camera, cellular, clipboard, cog, folder, globe, locate, notifications, 
 })
 export class HomePage {
   constructor() {
-    addIcons({camera, globe, clipboard, cog, folder, notifications, cellular, shareSocial, locate})
+    addIcons({camera, globe, clipboard, cog, folder, notifications, cellular, shareSocial, locate, map})
   }
 }

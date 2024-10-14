@@ -46,4 +46,8 @@ export const routes: Routes = [
     path: 'geolocalizacion',
     loadComponent: () => import('./geolocalizacion/geolocalizacion.page').then( m => m.GeolocalizacionPage)
   },
+  {
+    path: 'google-maps',
+    loadComponent: () => import('./google-maps/google-maps.page').then( m => m.GoogleMapsPage)
+  },
 ];

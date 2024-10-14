@@ -39,18 +39,19 @@ export class ArchivosPage implements OnInit {
   }
 
   async crearCarpeta() {
-
-
-    const carpetaExistente = await Filesystem.readdir({
-      path: this.carpeta,
-      directory: Directory.Documents
-    })
-    if (!carpetaExistente) {
+    try {
+      await Filesystem.readdir({
+        path: this.carpeta,
+        directory: Directory.Documents
+      })
+    } catch (e) {
       await Filesystem.mkdir({
         path: this.carpeta,
         directory: this.directortio,
       })
     }
+
+
   }
 
   async crearArchivo() {
@@ -80,7 +81,7 @@ export class ArchivosPage implements OnInit {
     console.log(`Archivo borrado: ${archivo}`);
   }
 
-  async leerDesdePath(){
+  async leerDesdePath() {
     // Se pueden leer usando el path del archivo. Devuelve un binario (en base64).
     // Generalmente se usa cuando los plugins devuelven las URIs de los archivos, como el de la camara.
     const archivo = await Filesystem.readFile({

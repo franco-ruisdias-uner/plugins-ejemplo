@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ng-template #noSearch>
+      <ion-buttons slot="start">
+        <ion-back-button default-href="#"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Google Maps</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="guardarPoligono()" *ngIf="modoPoligono">
+          <ion-icon slot="icon-only" name="checkmark"></ion-icon>
+        </ion-button>
+        <ion-button (click)="toggleSearchBar()" *ngIf="!modoPoligono">
+          <ion-icon slot="icon-only" name="search"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ng-template>
+    <app-search *ngIf="showSearch;else noSearch" (cancelSearch)="toggleSearchBar()" (coordinates)="onNewCoordinates($event)"/>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <capacitor-google-map #map></capacitor-google-map>
+</ion-content>
